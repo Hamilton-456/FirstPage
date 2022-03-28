@@ -566,11 +566,12 @@ footer{
 
 .footer__container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .footer__container-aboutme h5{
     position: relative;
+    display: inline;
     font-size: 2em;
     color: #fff;
     font-family: 'Raleway', sans-serif;
@@ -579,7 +580,7 @@ footer{
 .footer__container-aboutme h5::before{
     content: "";
     position: absolute;
-    width: 40%;
+    width: 100%;
     bottom: -5px;
     border-bottom: 2px solid var(--color-ahover);
 }
@@ -625,6 +626,7 @@ footer{
 
 .footer__container-social div{
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -651,4 +653,12 @@ footer{
     border-top: 0.75px solid var(--color-ahover);
 }
 
-/*solo es un comentario*/
+/* ==================== FOOTER MEDIA QUERY =================*/
+
+@media screen and (max-width: 550px){
+    .footer__container{
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+}
