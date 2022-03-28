@@ -343,7 +343,8 @@ h4{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .pricing .card__container{
@@ -351,11 +352,17 @@ h4{
     display: flex;
     flex-direction: column;
     gap: 40px;
-    min-width: 350px;
+    min-width: 325px;
+    max-width: 400px;
     border: 3px solid var(--color-card-outline);
     padding: 0px 0px 35px 0px;
     border-radius: 5px;
     text-align: center;
+}
+
+.pricing .card__container:hover .card-price{
+    height: 115px;
+    width: 115px;
 }
 
 .pricing .card__container h4{
@@ -378,6 +385,7 @@ h4{
     width: 100px;
     border: 2.5px solid var(--color-card-inside);
     border-radius: 50%;
+    transition: 0.5s;
 }
 
 .pricing .card-price{
@@ -391,6 +399,16 @@ h4{
     flex-direction: column;
     gap: 25px;
     padding-top: 120px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.pricing .info-month .info{
+    color: #333;
+    font-weight: 100;
+}
+
+.pricing .info-month .info b{
+    color: #222;
 }
 
 .pricing a{
@@ -401,3 +419,235 @@ h4{
     letter-spacing: 3.5px;
     border-radius: 25px;
 }
+
+/*================== CONTACT =================*/
+
+.contact{
+    position: relative;
+    overflow: hidden;
+    padding-top: 150px;
+    width: 100%;
+    background: #eee;
+}
+
+.contact h3{
+    text-align: center;
+    margin-bottom: 65px;
+    color: #222;
+}
+
+.contact .contact__container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    gap: 30px;
+}
+
+.contact .contact__info{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.contact .contact__info h5{
+    font-size: 30px;
+    font-family: 'M PLUS 1', sans-serif;
+}
+
+.contact .contact__info p{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 23px;
+    color: #777;
+    font-weight: 500;
+}
+
+.contact .personal-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact .personal-info .inf{
+    display: flex;
+    align-items: center;
+}
+
+.contact .personal-info .inf .ic{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 27px;
+    color: var(--color-ahover);
+    margin-right: 40px;
+}
+
+.contact .personal-info .inf .ic::after{
+    content: "";
+    position: absolute;
+    right: -20px;
+    height: 100%;
+    border-right: 2px solid #ddd;
+}
+
+.contact .personal-info .inf div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact .personal-info .inf div h6{
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.contact .info-slots{
+    display: flex;
+    flex-direction: column;
+    min-width: 45%;
+    gap: 25px;
+}
+
+.contact .info-slots .inp{
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+    font-style: none;
+    transition: background-color 0.5s ease;
+}
+
+.contact .info-slots .inp::placeholder{
+    color: #777;
+}
+
+.contact .info-slots .inp:focus{
+    background-color: var(--color-ahover);
+}
+
+.contact .info-slots .text-area{
+    resize: vertical;
+}
+
+.contact .send-button{
+    margin-top: 15px;
+    max-width: 45%;
+    min-width: 35%;
+    padding: 5px 10px;
+    background: var(--color-ahover);
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-left: auto;
+}
+
+/*================ CONTACT QUERYS =================*/
+
+@media screen and (max-width: 768px){
+    .contact__container{
+        flex-direction: column;
+    }
+}
+
+/*================ FOOTER =================*/
+
+footer{
+    margin-top: 100px;
+    background: #222;
+    padding: 25px 0 10px 0;
+}
+
+.footer__container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer__container-aboutme h5{
+    position: relative;
+    font-size: 2em;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer__container-aboutme h5::before{
+    content: "";
+    position: absolute;
+    width: 40%;
+    bottom: -5px;
+    border-bottom: 2px solid var(--color-ahover);
+}
+
+.footer__container-aboutme p{
+    font-size: 12px;
+    margin-top: 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+}
+
+.footer-menu h5{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.footer-menu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-menu ul a{
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.footer__container-social h5{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer__container-social div{
+    display: flex;
+    gap: 10px;
+}
+
+.footer__container-social .bx{
+    font-size: 20px;
+}
+
+.copyright{
+    position: relative;
+    margin-top: 25px;
+    font-weight: 100;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.copyright::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -8px;
+    width: 100%;
+    border-top: 0.75px solid var(--color-ahover);
+}
+
